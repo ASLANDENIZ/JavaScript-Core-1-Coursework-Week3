@@ -15,10 +15,22 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
+function isNull(item) {
+  return item === null;
+  
+}
+
+
+
 var pairs = pairsByIndex.map(function (indexes) {
-  var student = students[indexes[0]];
-  var mentor = mentors[indexes[1]];
-  return [student, mentor];
+  if (indexes.some(isNull)) {
+    process.exit(1);
+  } else {
+    var student = students[indexes[0]];
+    var mentor = mentors[indexes[1]];
+    return [student, mentor];
+  }
+  
 });
 
 console.log(pairs);
