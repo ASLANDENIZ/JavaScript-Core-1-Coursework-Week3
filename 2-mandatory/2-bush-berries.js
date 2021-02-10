@@ -21,7 +21,27 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function isBushSafe() {}
+// function isBushSafe(berry) {
+//   if (berry === "pink") 
+//   return "Eat them all! :)";
+// }
+
+// newArr.every(isBushSafe);
+
+
+function isBerryPink(berry) {
+  return berry === "pink";
+}
+
+function isBushSafe(arr) { if (arr.every(isBerryPink)){
+  return "Bush is safe to eat from";
+} else {
+  return "Toxic! Leave bush alone!";
+}
+}
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

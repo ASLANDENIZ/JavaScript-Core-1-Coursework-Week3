@@ -10,14 +10,20 @@
 
     Some string methods that might help you here are .replace() and .substring(). 
 */
-
-function findSafeOxygenLevel(arr) {
-  arr.map(function(level){
-    if ("19.5%" < level < "23.5%") {
-      return level;
-    }
-  })
  
+function findSafeOxygenLevel(arr) {
+ let numbers = arr.map(level => +level.replace("%", ""));
+let goodLevels = numbers.find(number => number > 19.5 && number < 23.5);
+return `${goodLevels}%`;
+
+ }
+
+
+
+// if (19.5 < level < 23.5) {
+//   return level;
+// }
+
 
 
 

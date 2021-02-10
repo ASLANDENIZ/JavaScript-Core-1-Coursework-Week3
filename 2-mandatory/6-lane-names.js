@@ -6,7 +6,15 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+function getLanes(array) {
+  const Lane = array.filter(function(string){
+    if (string.includes("Lane")){
+      return string;
+    }
+  })
+  return Lane;
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

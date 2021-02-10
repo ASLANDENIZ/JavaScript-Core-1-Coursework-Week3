@@ -15,7 +15,20 @@
   
 */
 
-function getSettlers() {}
+
+function isFamily(string) {
+  if (string.includes("family") && string[0] === "A") {
+    return string;
+  }
+}
+
+
+
+
+function getSettlers(array) {
+  return array.filter(isFamily);
+ 
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
