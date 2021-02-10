@@ -11,7 +11,15 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel(arr) {
+  arr.map(function(level){
+    if ("19.5%" < level < "23.5%") {
+      return level;
+    }
+  })
+ 
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
