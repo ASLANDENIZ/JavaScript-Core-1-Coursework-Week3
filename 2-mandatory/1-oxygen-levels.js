@@ -20,9 +20,6 @@ return `${goodLevels}%`;
 
 
 
-// if (19.5 < level < 23.5) {
-//   return level;
-// }
 
 
 

@@ -128,12 +128,12 @@ function getLocationName(array) {
   Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
-  
-  if (locations.includes(transportMode)) {
-    return locations[0];
+  const newLocations = locations.filter(location => location.includes(transportMode));
+  const destinations = newLocations.map(place => place[0]);
+  return destinations;
   }
   // Implement the function body
-}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
