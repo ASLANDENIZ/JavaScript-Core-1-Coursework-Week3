@@ -25,7 +25,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-    if (passwords.length >= 5 && passwords.includes(")
+   return passwords.map(password => password.length >= 5 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /[0-9]/.test(password) && /[!#$%.*&]/.test(password) && passwords1.concat(passwords2).includes(password) !== true);
+
 }
 
 // Returns true if string contains at least one uppercase letter.
@@ -67,13 +68,13 @@ function test(test_name, actual, expected) {
 }
 
 test(
-  "validatePasswords function works - case 1",
-  validatePasswords(passwords1),
-  [false, false, true, false, false]
- );
+    "validatePasswords function works - case 1",
+    validatePasswords(passwords1),
+    [false, false, true, false, false]
+);
 
 test(
-  "validatePasswords function works - case 2",
-  validatePasswords(passwords2),
-  [true, true, false, false, false]
+    "validatePasswords function works - case 2",
+    validatePasswords(passwords2),
+    [true, true, false, false, false]
 );

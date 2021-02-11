@@ -11,12 +11,9 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
  
-function findSafeOxygenLevel(arr) {
- let numbers = arr.map(level => +level.replace("%", ""));
-let goodLevels = numbers.find(number => number > 19.5 && number < 23.5);
-return `${goodLevels}%`;
+const findSafeOxygenLevel = arr => arr.map(level => +level.replace("%", "")).find(number => number > 19.5 && number < 23.5) + "%";
 
- }
+ 
 
 
 
